@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div
+      class="bg-[url('./assets/img3.jpeg')] h-screen w-full bg-cover bg-center bg-no-repeat relative"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      <!-- Navigation Bar -->
+      <div class="relative z-10 lg:mx-16 mx-5">
+        <nav class="flex lg:justify-between flex-wrap items-center p-4">
+          <!-- Logo -->
+          <div>
+            <img src="./assets/logo.jpg" alt="Logo" class="h-10 w-auto" />
+          </div>
+          <!-- Navigation Links -->
+          <div class="flex flex-wrap gap-4 text-white font-semibold mt-4 lg:mt-0">
+            <a href="#" class="hover:text-violet-400">Home</a>
+            <a href="#" class="hover:text-violet-400">Service</a>
+            <a href="#" class="hover:text-violet-400">Contact Us</a>
+            <a href="#" class="hover:text-violet-400">Quote</a>
+          </div>
+          <!-- Login Button -->
+          <div class="mt-4 lg:mt-0">
+            <button class="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-700">
+              Login
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 lg:mx-16 mx-5 flex flex-wrap lg:justify-between items-center gap-8">
+        <!-- Left Content -->
+        <div class="space-y-6 lg:w-1/2 w-full text-white">
+          <h1 class="font-bold text-3xl md:text-5xl">Your Bridge to Global Trade</h1>
+          <p class="font-medium text-lg md:text-2xl">
+            Our Company offers services around the globe whether you want to ship it from container,
+            through sea or by air with effective supply chain management.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700"
+            >
+              Import
+            </button>
+            <button
+              class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700"
+            >
+              Export
+            </button>
+          </div>
+          <div class="space-y-3">
+            <input
+              class="py-2 px-4 rounded-md w-full md:w-auto focus:outline-none"
+              type="text"
+              placeholder="Search by VIN / Container #"
+            />
+            <button
+              class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700"
+            >
+              Track Shipment
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Image Section -->
+        <div class="lg:w-1/2 w-full">
+          <div class="flex justify-center lg:justify-end relative">
+            <img src="./assets/img1.png" alt="Main Image" class="w-full lg:w-auto" />
+            <div class="absolute right-16 -bottom-10">
+              <img src="./assets/img2.png" alt="Small Image" class="w-32 lg:w-52" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
