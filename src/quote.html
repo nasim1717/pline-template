@@ -20,29 +20,32 @@
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
       <!-- Navigation bar -->
-      <div class="relative z-10 lg:mx-16 mx-5">
-        <nav class="flex lg:justify-between lg:flex-row flex-col lg:items-center p-6">
-          <!-- Logo -->
-          <div>
-            <img src="./assets/logo.jpg" alt="Logo" class="h-12 w-auto" />
-          </div>
+      <div class="bg-black/10">
+        <div class="relative z-10 lg:mx-16 mx-5">
+          <nav class="flex lg:justify-between lg:flex-row flex-col lg:items-center p-6">
+            <!-- Logo -->
+            <div>
+              <img src="./assets/logo.jpg" alt="Logo" class="h-12 w-auto" />
+            </div>
 
-          <!-- Navigation Links -->
-          <div class="flex space-x-6 text-white font-semibold">
-            <a href="./home.html" class="hover:text-violet-400">Home</a>
-            <a href="#" class="hover:text-violet-400">Service</a>
-            <a href="#" class="hover:text-violet-400">Contact Us</a>
-            <a href="#" class="hover:text-violet-400">Quote</a>
-          </div>
+            <!-- Navigation Links -->
+            <div class="flex space-x-6 text-white font-semibold">
+              <a href="./home.html" class="hover:text-violet-400">Home</a>
+              <a href="./services.html" class="hover:text-violet-400">Service</a>
+              <a href="./contact.html" class="hover:text-violet-400">Contact Us</a>
+              <a href="./quote.html" class="hover:text-violet-400">Quote</a>
+            </div>
 
-          <!-- Login Button -->
-          <div>
-            <button class="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-700">
-              Login
-            </button>
-          </div>
-        </nav>
+            <!-- Login Button -->
+            <div>
+              <button class="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-700">
+                Login
+              </button>
+            </div>
+          </nav>
+        </div>
       </div>
+
       <div class="relative z-10 lg:mx-16 mx-5 mt-32">
         <p class="font-bold text-6xl text-center text-white">Get A Quote</p>
       </div>
@@ -58,8 +61,186 @@
             </div>
           </section>
           <!-- calculate end -->
+
+          <!-- form start -->
+          <section class="flex justify-center items-center mt-10">
+            <div class="w-2/3 bg-gray-200 p-20 rounded-sm">
+              <div class="flex justify-center items-center">
+                <div class="space-y-4 w-full">
+                  <!-- radio button -->
+                  <div class="flex gap-x-3 text-lg">
+                    <div class="flex justify-center items-center gap-x-2">
+                      <input id="import" type="radio" name="type" class="h-5 w-5 align-middle" />
+                      <label for="import" class="font-bold">Import</label>
+                    </div>
+                    <div class="flex justify-center items-center gap-x-2">
+                      <input id="export" type="radio" name="type" class="h-5 w-5 align-middle" />
+                      <label for="export" class="font-bold">Export</label>
+                    </div>
+                  </div>
+                  <!-- radio button end -->
+
+                  <!--input form -->
+                  <div class="grid grid-cols-2 gap-y-4 gap-x-4">
+                    <div class="flex flex-col gap-y-2 text-lg font-bold">
+                      <label for="country">Country</label>
+                      <select
+                        name="country"
+                        id="country"
+                        class="font-semibold py-3 px-1 w-full border border-gray-400 focus:outline-none text-gray-600 rounded"
+                      >
+                        <option value="">Select Country</option>
+                        <option value="">Canada</option>
+                        <option value="">United States</option>
+                        <option value="">Copart UAE</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-col gap-y-2 text-lg font-bold">
+                      <label for="statecity">State & City</label>
+                      <select
+                        name="statecity"
+                        id="statecity"
+                        class="font-semibold w-full py-3 px-1 border border-gray-400 text-gray-600 focus:outline-none rounded"
+                      >
+                        <option value="">Select State</option>
+                        <option value="">Canada</option>
+                        <option value="">United States</option>
+                        <option value="">Copart UAE</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-col gap-y-2 text-lg font-bold">
+                      <label for="destinationport">Destination Port</label>
+                      <select
+                        name="destination"
+                        id="destinationport"
+                        class="font-semibold w-full py-3 px-1 border border-gray-400 text-gray-600 focus:outline-none rounded"
+                      >
+                        <option value="">Select Destination</option>
+                        <option value="">Aqaba, Jordan</option>
+                        <option value="">Mersin, Turkey</option>
+                        <option value="">Sohar Oman</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-col gap-y-2 text-lg font-bold">
+                      <label for="date">Price For The Month</label>
+                      <input
+                        id="date"
+                        type="date"
+                        placeholder="Destination Port"
+                        class="font-bold w-full py-2 px-1 border border-gray-600 focus:outline-none text-gray-600 rounded"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-y-2 text-lg font-bold">
+                      <label for="vehicletype">Vehicle Type</label>
+                      <select
+                        name="vehicletype"
+                        id="vehicletype"
+                        class="font-semibold w-full py-3 px-1 border border-gray-600 text-gray-600 focus:outline-none rounded"
+                      >
+                        <option value="">Select Destination</option>
+                        <option value="">Aqaba, Jordan</option>
+                        <option value="">Mersin, Turkey</option>
+                        <option value="">Sohar Oman</option>
+                      </select>
+                    </div>
+                    <div class="self-end">
+                      <button
+                        class="w-full py-3 px-5 bg-violet-500 text-white text-lg font-semibold rounded-md shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75"
+                      >
+                        Check Rates
+                      </button>
+                    </div>
+                  </div>
+                  <!-- input form -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- form end -->
         </div>
       </div>
     </main>
+
+    <footer class="bg-gray-800 text-white">
+      <div class="mx-16 mt-20 flex justify-center pt-10">
+        <div class="grid grid-cols-4 gap-4 w-[85%]">
+          <section class="space-y-4">
+            <div>
+              <h1 class="text-2xl font-bold">PLine Shipping</h1>
+            </div>
+            <div>
+              <p>
+                Galaxy Worldwide Shipping company is one of the top Auto Shipping Firms in UAE and
+                the world since 2005. Galaxy provides fast, reliable, and high-quality shipping
+                services. We can import or export your brand new, used or custom made cars, boats,
+                bikes, and trucks from and to UAE and the world.
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+            </div>
+          </section>
+          <section class="space-y-4 flex justify-start items-center flex-col">
+            <div>
+              <h1 class="font-bold text-2xl">Quick Links</h1>
+            </div>
+            <div>
+              <nav class="flex flex-col gap-y-5">
+                <a href="#"><i class="fa-solid fa-angles-right"></i> Home</a>
+                <a href="#"><i class="fa-solid fa-angles-right"></i> Services</a>
+                <a href="#"><i class="fa-solid fa-angles-right"></i> About Us</a>
+                <a href="#"><i class="fa-solid fa-angles-right"></i> Contact Us</a>
+                <a href="#"><i class="fa-solid fa-angles-right"></i> Quote</a>
+              </nav>
+            </div>
+          </section>
+          <section class="space-y-4 flex justify-start flex-col">
+            <div>
+              <h1 class="font-bold text-2xl">Find Us</h1>
+            </div>
+            <div class="space-y-5">
+              <div class="flex items-center gap-x-3">
+                <i class="fa-solid fa-envelope text-xl text-violet-600"></i>
+                <h1>info@galaxyshipping.com</h1>
+              </div>
+              <div class="flex items-center gap-x-3">
+                <i class="fa-brands fa-whatsapp text-xl text-violet-600"></i>
+                <h1>(+971) 6 510 3456</h1>
+              </div>
+              <div class="flex items-center gap-x-3">
+                <i class="fa-solid fa-location-dot text-xl text-violet-600"></i>
+                <h1>Al Ruqa Al Hamra - Near Souk Al Haraj Sharjah | United Arab Emirates</h1>
+              </div>
+            </div>
+          </section>
+          <section class="space-y-4">
+            <div>
+              <h1 class="font-bold text-xl">Get The App</h1>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-[130px]">
+                <img src="./assets/google-play.webp" alt="" width="130" />
+              </div>
+              <div class="w-[130px]">
+                <img src="./assets/app-store.webp" width="130" alt="" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="mt-7">
+        <hr class="border-gray-600" />
+        <div class="text-center py-4">
+          <h1>
+            © Copyright 2024. All rights reserved.
+            <span class="text-violet-600">Galaxy World Wide Shipping</span>
+          </h1>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -20,29 +20,33 @@
       <div class="absolute inset-0 bg-black bg-opacity-75"></div>
 
       <!-- Navigation bar -->
-      <div class="relative z-10 lg:mx-16 mx-5">
-        <nav class="flex lg:justify-between lg:flex-row flex-col lg:items-center p-6">
-          <!-- Logo -->
-          <div>
-            <img src="./assets/logo.jpg" alt="Logo" class="h-12 w-auto" />
-          </div>
+      <div class="bg-black/10">
+        <div class="relative z-10 lg:mx-16 mx-5">
+          <nav class="flex lg:justify-between lg:flex-row flex-col lg:items-center p-6">
+            <!-- Logo -->
+            <div>
+              <img src="./assets/logo.jpg" alt="Logo" class="h-12 w-auto" />
+            </div>
 
-          <!-- Navigation Links -->
-          <div class="flex space-x-6 text-white font-semibold">
-            <a href="#" class="hover:text-violet-400">Home</a>
-            <a href="#" class="hover:text-violet-400">Service</a>
-            <a href="#" class="hover:text-violet-400">Contact Us</a>
-            <a href="./quote.html" class="hover:text-violet-400">Quote</a>
-          </div>
+            <!-- Navigation Links -->
+            <div class="flex space-x-6 text-white font-semibold">
+              <a href="#" class="hover:text-violet-400">Home</a>
+              <a href="./services.html" class="hover:text-violet-400">Services</a>
+              <a href="./about.html" class="hover:text-violet-400">About Us</a>
+              <a href="./contact.html" class="hover:text-violet-400">Contact Us</a>
+              <a href="./quote.html" class="hover:text-violet-400">Quote</a>
+            </div>
 
-          <!-- Login Button -->
-          <div>
-            <button class="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-700">
-              Login
-            </button>
-          </div>
-        </nav>
+            <!-- Login Button -->
+            <div>
+              <button class="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-700">
+                Login
+              </button>
+            </div>
+          </nav>
+        </div>
       </div>
+
       <!-- hero section -->
       <div
         class="relative z-10 lg:mx-16 mx-5 text-white flex lg:justify-between lg:flex-row flex-col gap-y-3 mt-20"
@@ -455,36 +459,36 @@
           <!-- message section start -->
           <section class="mt-20 mx-16 flex justify-center items-center">
             <div>
-              <div class="flex gap-6 justify-center">
+              <div class="grid grid-cols-2 gap-x-8 justify-center">
                 <div>
-                  <h1 class="text-6xl font-bold leading-[67px]">
+                  <h1 class="text-7xl font-bold leading-[67px]">
                     Get in touch with us now for any <span class="text-violet-600">Inquiries!</span>
                   </h1>
                 </div>
                 <div>
                   <div class="space-y-4">
-                    <div class="flex gap-x-5">
+                    <div class="grid grid-cols-2 gap-x-3 font-bold">
                       <div class="flex flex-col">
-                        <label for="firstName " class="font-semibold">First Name</label>
+                        <label for="firstName " class="font-bold">First Name</label>
                         <input
                           type="text"
                           name="firstname"
                           placeholder="Rahim"
-                          class="bg-gray-200 py-3 px-2 w-64 focus:outline-none"
+                          class="bg-gray-200 py-3 px-2 w-full focus:outline-none"
                         />
                       </div>
                       <div class="flex flex-col">
-                        <label for="lastName " class="font-semibold">Last Name</label>
+                        <label for="lastName " class="font-bold">Last Name</label>
                         <input
                           type="text"
                           name="lastname"
                           placeholder="Alam"
-                          class="bg-gray-200 py-3 px-2 w-64 focus:outline-none"
+                          class="bg-gray-200 py-3 px-2 w-full focus:outline-none"
                         />
                       </div>
                     </div>
                     <div class="flex flex-col">
-                      <label for="phone " class="font-semibold">Your Phone</label>
+                      <label for="phone " class="font-bold">Your Phone</label>
                       <input
                         type="text"
                         name="phone"
@@ -493,7 +497,7 @@
                       />
                     </div>
                     <div>
-                      <label for="message" class="font-semibold">Your Message</label>
+                      <label for="message" class="font-bold">Your Message</label>
                       <textarea
                         type="text"
                         name="message"
