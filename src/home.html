@@ -17,23 +17,30 @@
     <!-- Navigation bar -->
     <div id="navbar" class="sticky top-0 z-40">
       <div class="relative z-10 lg:mx-16 mx-5">
-        <nav class="flex lg:justify-between lg:flex-row flex-col lg:items-center p-6">
+        <nav class="flex md:justify-between flex-col md:flex-row gap-y-4 p-6">
           <!-- Logo -->
-          <div>
+          <div class="flex justify-between">
             <img src="./assets/logo.jpg" alt="Logo" class="h-12 w-auto" />
+            <div onclick="menuOpenFunction(this)" class="md:hidden block" id="menu-button-open">
+              <i class="fa-solid fa-bars text-3xl text-white"></i>
+            </div>
+            <div onclick="menuCloseFunction(this)" class="hidden md:hidden" id="menu-button-close">
+              <i class="fa-solid fa-xmark text-3xl text-white"></i>
+            </div>
           </div>
 
           <!-- Navigation Links -->
-          <div class="flex space-x-6 text-white font-semibold text-lg">
-            <a href="./home.html" class="hover:text-violet-400">Home</a>
-            <a href="./services.html" class="hover:text-violet-400">Service</a>
-            <a href="./about.html" class="hover:text-violet-400">Service</a>
-            <a href="#" class="hover:text-violet-400">Contact Us</a>
-            <a href="./quote.html" class="hover:text-violet-400">Quote</a>
+          <div id="nav-link" class="space-y-4 hidden md:flex justify-center items-center gap-x-4">
+            <div class="flex gap-y-2 text-white font-semibold text-lg flex-col md:flex-row gap-x-4">
+              <a href="./home.html" class="hover:text-violet-400">Home</a>
+              <a href="./services.html" class="hover:text-violet-400">Service</a>
+              <a href="./about.html" class="hover:text-violet-400">Service</a>
+              <a href="#" class="hover:text-violet-400">Contact Us</a>
+              <a href="./quote.html" class="hover:text-violet-400">Quote</a>
+            </div>
           </div>
-
           <!-- Login Button -->
-          <div>
+          <div id="login-button" class="hidden md:block">
             <button
               class="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-700 text-lg"
             >
@@ -44,67 +51,73 @@
       </div>
     </div>
     <!-- Navigation end -->
+
     <div
-      class="bg-[url('./assets/img3.jpeg')] h-screen w-full bg-cover bg-center bg-no-repeat absolute top-0 flex items-center"
+      class="bg-[url('./assets/img3.jpeg')] h-screen w-full bg-cover bg-center bg-no-repeat absolute top-0 flex items-center justify-center"
     >
       <div class="absolute inset-0 bg-black bg-opacity-75"></div>
 
       <!-- hero section -->
       <div
-        class="relative z-10 lg:mx-16 mx-5 text-white flex lg:justify-between lg:flex-row flex-col gap-y-3 mt-20"
+        class="lg:w-[85%] w-full p-2 lg:p-0 flex justify-center items-center relative z-10 mt-20"
       >
-        <!-- global treade -->
-        <div class="space-y-5 lg:w-2/4 w-full">
-          <h1 class="font-bold text-5xl leading-[65px]">
-            <span class="text-violet-600">Your Bridge to</span><br />
-            Global Trade
-          </h1>
-          <p class="font-bold text-2xl">
-            Our Company offers services around the globe whether you want to ship it from container,
-            through sea or by air with effective supply chain management.
-          </p>
-          <div>
-            <button
-              class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75"
-            >
-              Import
-            </button>
-            <button
-              class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75"
-            >
-              Export
-            </button>
+        <div class="text-white flex lg:justify-between lg:flex-row flex-col lg:gap-y-5 gap-y-2">
+          <!-- global treade -->
+          <div class="lg:space-y-5 space-y-2 lg:w-2/4 w-full">
+            <h1 class="font-bold md:text-5xl text-lg md:leading-[65px]">
+              <span class="text-violet-600">Your Bridge to</span><br />
+              Global Trade
+            </h1>
+            <p class="font-bold md:text-2xl text-sm">
+              Our Company offers services around the globe whether you want to ship it from
+              container, through sea or by air with effective supply chain management.
+            </p>
+            <div>
+              <button
+                class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75"
+              >
+                Import
+              </button>
+              <button
+                class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75"
+              >
+                Export
+              </button>
+            </div>
+            <div class="space-y-3">
+              <input
+                class="py-2 px-2 rounded focus:outline-none text-gray-700"
+                type="text"
+                placeholder="Search by VIN / Container #"
+              />
+              <button
+                class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75"
+              >
+                Track Shipment
+              </button>
+            </div>
           </div>
-          <div class="space-y-3">
-            <input
-              class="py-2 px-2 rounded focus:outline-none text-gray-700"
-              type="text"
-              placeholder="Search by VIN / Container #"
-            />
-            <button
-              class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75"
-            >
-              Track Shipment
-            </button>
-          </div>
-        </div>
-        <!-- imgae -->
-        <div class="w-2/4">
-          <div class="flex justify-end relative">
-            <img src="./assets/img1.png" alt="" />
-            <div class="absolute right-96 -bottom-20">
-              <img src="./assets/img2.png" alt="" class="w-52 rounded-sm" />
+          <!-- imgae -->
+          <div class="lg:w-2/4 w-full">
+            <div class="flex justify-end relative">
+              <img src="./assets/img1.png" alt="" class="w-44 md:w-96" />
+              <div class="absolute bottom-5 right-36 md:right-60 md:bottom-10">
+                <img src="./assets/img2.png" alt="" class="w-20 md:w-40 rounded-sm" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <main class="">
-      <div class="flex justify-center items-center mx-16 mt-20 mb-10">
-        <div class="w-[85%]">
+
+    <main class="mt-[calc(100vh+0px)]">
+      <div class="flex justify-center items-center lg:mx-16 mb-10">
+        <div class="lg:w-[85%] w-full">
           <!-- service name start -->
           <section class="flex justify-center items-center text-white">
-            <div class="bg-gray-700 flex p-10 gap-32 rounded">
+            <div
+              class="bg-gray-700 grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 p-10 gap-y-10 md:gap-x-20 lg:gap-x-28 rounded justify-center items-center"
+            >
               <div class="text-center space-y-2">
                 <i class="fa-solid fa-plane text-6xl text-gray-500"></i>
                 <h1 class="font-semibold">AIR FREIGHT</h1>
@@ -138,8 +151,8 @@
               </div>
             </div>
             <!-- slider start -->
-            <div class="flex justify-center items-center mt-16">
-              <div class="flex gap-x-6 gap-y-2 flex-wrap">
+            <div class="flex justify-center items-center mt-16 p-2 lg:p-0">
+              <div class="flex justify-center gap-x-6 gap-y-2 flex-wrap">
                 <!-- slide 1 -->
                 <div class="w-60 bg-slate-300 p-5 rounded space-y-2">
                   <div class="flex justify-center">
@@ -261,9 +274,9 @@
           <!-- trusted end -->
 
           <!-- shipping efficiency start -->
-          <section class="flex justify-center mx-16 mt-20">
-            <div class="flex gap-x-4">
-              <div class="w-2/4 space-y-6">
+          <section class="flex justify-center lg:mx-16 p-2 lg:p-0 mt-20">
+            <div class="flex flex-col lg:flex-row gap-x-4 gap-y-4">
+              <div class="lg:w-2/4 w-full space-y-6">
                 <div>
                   <h1 class="text-5xl font-bold">
                     Shipping Efficiency with Our All-In-One Solution
@@ -303,15 +316,17 @@
                 </div>
               </div>
 
-              <div class="w-2/4">
-                <div class="flex justify-end h-full"><img src="./assets/img2.png" alt="" /></div>
+              <div class="lg:w-2/4 w-full">
+                <div class="lg:flex lg:justify-end h-full w-full">
+                  <img src="./assets/img2.png" alt="" class="w-full" />
+                </div>
               </div>
             </div>
           </section>
           <!-- shipping efficiency end -->
 
           <!-- port to port start -->
-          <section class="mt-20 mx-16 flex justify-center">
+          <section class="mt-20 lg:mx-16 p-2 lg:p-0 flex justify-center">
             <div class="">
               <div>
                 <h1 class="text-center text-6xl font-semibold leading-[65px]">
@@ -322,7 +337,9 @@
                   We reached here with our hard work and dedication
                 </p>
               </div>
-              <div class="flex justify-around mt-10">
+              <div
+                class="flex flex-col md:flex-row gap-y-4 md:justify-around justify-center items-center mt-10"
+              >
                 <div class="border-l-4 border-violet-600">
                   <div class="space-y-3 pl-5">
                     <h1 class="font-bold text-3xl">2,000+</h1>
@@ -347,10 +364,10 @@
           <!-- port to port end -->
 
           <!-- why choose us start -->
-          <section class="mt-20 mx-16 flex justify-center items-center">
+          <section class="mt-20 lg:mx-16 lg:flex lg:justify-center lg:items-center">
             <div>
-              <div class="flex justify-center items-center">
-                <div class="text-center w-[51%] space-y-2">
+              <div class="lg:flex justify-center items-center">
+                <div class="text-center lg:w-[51%] w-full space-y-2">
                   <h1 class="text-4xl font-bold">Why Choose Us</h1>
                   <p>
                     Galaxy Worldwide Shipping recognizes the significance of choosing a reliable
@@ -360,10 +377,12 @@
                   </p>
                 </div>
               </div>
-              <div class="flex justify-center items-center mt-20">
-                <div class="grid grid-cols-3 gap-x-10 gap-y-4">
+              <div class="lg:flex justify-center items-center mt-20">
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 md:gap-x-10 2xl:gap-x-12 gap-y-4"
+                >
                   <!-- choose 1 -->
-                  <div class="flex justify-center items-center gap-x-3 w-[25rem] p-6">
+                  <div class="flex justify-center items-center gap-x-3 lg:w-[25rem] w-full p-6">
                     <i class="fa-solid fa-users text-5xl"></i>
                     <div
                       class="flex justify-center items-center gap-x-4 border-l-[1px] border-gray-800"
@@ -378,7 +397,7 @@
                     </div>
                   </div>
                   <!-- choose 2 -->
-                  <div class="flex justify-center items-center gap-x-3 w-[25rem] p-6">
+                  <div class="flex justify-center items-center gap-x-3 lg:w-[25rem] w-full p-6">
                     <i class="fa-solid fa-users text-5xl"></i>
                     <div
                       class="flex justify-center items-center gap-x-4 border-l-[1px] border-gray-800"
@@ -393,7 +412,7 @@
                     </div>
                   </div>
                   <!-- choose 3 -->
-                  <div class="flex justify-center items-center gap-x-3 w-[25rem] p-6">
+                  <div class="flex justify-center items-center gap-x-3 lg:w-[25rem] w-full p-6">
                     <i class="fa-solid fa-users text-5xl"></i>
                     <div
                       class="flex justify-center items-center gap-x-4 border-l-[1px] border-gray-800"
@@ -408,7 +427,7 @@
                     </div>
                   </div>
                   <!-- choose 4 -->
-                  <div class="flex justify-center items-center gap-x-3 w-[25rem] p-6">
+                  <div class="flex justify-center items-center gap-x-3 lg:w-[25rem] w-full p-6">
                     <i class="fa-solid fa-users text-5xl"></i>
                     <div
                       class="flex justify-center items-center gap-x-4 border-l-[1px] border-gray-800"
@@ -423,7 +442,7 @@
                     </div>
                   </div>
                   <!-- choose 5 -->
-                  <div class="flex justify-center items-center gap-x-3 w-[25rem] p-6">
+                  <div class="flex justify-center items-center gap-x-3 lg:w-[25rem] w-full p-6">
                     <i class="fa-solid fa-users text-5xl"></i>
                     <div
                       class="flex justify-center items-center gap-x-4 border-l-[1px] border-gray-800"
@@ -438,7 +457,7 @@
                     </div>
                   </div>
                   <!-- choose 6 -->
-                  <div class="flex justify-center items-center gap-x-3 w-[25rem] p-6">
+                  <div class="flex justify-center items-center gap-x-3 lg:w-[25rem] w-full p-6">
                     <i class="fa-solid fa-users text-5xl"></i>
                     <div
                       class="flex justify-center items-center gap-x-4 border-l-[1px] border-gray-800"
@@ -459,9 +478,9 @@
           <!-- why choose us end -->
 
           <!-- message section start -->
-          <section class="mt-20 mx-16 flex justify-center items-center">
+          <section class="mt-20 lg:mx-16 p-3 lg:p-0 flex justify-center items-center">
             <div>
-              <div class="grid grid-cols-2 gap-x-8 justify-center">
+              <div class="grid lg:grid-cols-2 grid-cols-1 md:gap-x-8 gap-y-4 justify-center">
                 <div>
                   <h1 class="text-7xl font-bold leading-[67px]">
                     Get in touch with us now for any <span class="text-violet-600">Inquiries!</span>
@@ -469,7 +488,7 @@
                 </div>
                 <div>
                   <div class="space-y-4">
-                    <div class="grid grid-cols-2 gap-x-3 font-bold">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-x-3 font-bold">
                       <div class="flex flex-col">
                         <label for="firstName " class="font-bold">First Name</label>
                         <input
@@ -522,9 +541,11 @@
     </main>
 
     <footer class="bg-gray-800 text-white">
-      <div class="mx-16 mt-20 flex justify-center pt-10">
-        <div class="grid grid-cols-4 gap-4 w-[85%]">
-          <section class="space-y-4">
+      <div class="lg:mx-16 mt-20 flex justify-center pt-10">
+        <div
+          class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-4 gap-4 lg:w-[85%] w-full"
+        >
+          <section class="space-y-4 p-2">
             <div>
               <h1 class="text-2xl font-bold">PLine Shipping</h1>
             </div>
@@ -544,7 +565,7 @@
               <i class="fa-brands fa-x-twitter"></i>
             </div>
           </section>
-          <section class="space-y-4 flex justify-start items-center flex-col">
+          <section class="space-y-4 flex justify-start lg:items-center items-start flex-col p-2">
             <div>
               <h1 class="font-bold text-2xl">Quick Links</h1>
             </div>
@@ -558,14 +579,14 @@
               </nav>
             </div>
           </section>
-          <section class="space-y-4 flex justify-start flex-col">
+          <section class="space-y-4 flex justify-start flex-col p-2">
             <div>
               <h1 class="font-bold text-2xl">Find Us</h1>
             </div>
             <div class="space-y-5">
-              <div class="flex items-center gap-x-3">
+              <div class="flex items-center gap-x-3 text-balance">
                 <i class="fa-solid fa-envelope text-xl text-violet-600"></i>
-                <h1>info@galaxyshipping.com</h1>
+                <h1 class="">info@galaxyshipping.com</h1>
               </div>
               <div class="flex items-center gap-x-3">
                 <i class="fa-brands fa-whatsapp text-xl text-violet-600"></i>
@@ -577,7 +598,7 @@
               </div>
             </div>
           </section>
-          <section class="space-y-4">
+          <section class="space-y-4 p-2 lg:ml-8">
             <div>
               <h1 class="font-bold text-xl">Get The App</h1>
             </div>
@@ -595,7 +616,7 @@
       <div class="mt-7">
         <hr class="border-gray-600" />
         <div class="text-center py-4">
-          <h1>
+          <h1 class="p-2">
             © Copyright 2024. All rights reserved.
             <span class="text-violet-600">Galaxy World Wide Shipping</span>
           </h1>
