@@ -13,46 +13,56 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
-    <div
-      class="bg-[url('./assets/img3.jpeg')] h-screen w-full bg-cover bg-center bg-no-repeat relative"
-    >
-      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
-
-      <!-- Navigation bar -->
-      <div class="bg-black/10">
-        <div class="relative z-10 lg:mx-16 mx-5">
-          <nav class="flex lg:justify-between lg:flex-row flex-col lg:items-center p-6">
-            <!-- Logo -->
-            <div>
-              <img src="./assets/logo.jpg" alt="Logo" class="h-12 w-auto" />
+  <body class="relative">
+    <!-- Navigation bar -->
+    <div id="navbar" class="sticky top-0 z-40">
+      <div class="relative z-10 lg:mx-16 mx-5">
+        <nav class="flex md:justify-between flex-col md:flex-row gap-y-4 p-6">
+          <!-- Logo -->
+          <div class="flex justify-between">
+            <img src="./assets/logo.jpg" alt="Logo" class="h-12 w-auto" />
+            <div onclick="menuOpenFunction(this)" class="md:hidden block" id="menu-button-open">
+              <i class="fa-solid fa-bars text-3xl text-white"></i>
             </div>
+            <div onclick="menuCloseFunction(this)" class="hidden md:hidden" id="menu-button-close">
+              <i class="fa-solid fa-xmark text-3xl text-white"></i>
+            </div>
+          </div>
 
-            <!-- Navigation Links -->
-            <div class="flex space-x-6 text-white font-semibold">
-              <a href="#" class="hover:text-violet-400">Home</a>
-              <a href="./services.html" class="hover:text-violet-400">Services</a>
-              <a href="./about.html" class="hover:text-violet-400">About Us</a>
+          <!-- Navigation Links -->
+          <div id="nav-link" class="space-y-4 hidden md:flex justify-center items-center gap-x-4">
+            <div class="flex gap-y-2 text-white font-semibold text-lg flex-col md:flex-row gap-x-4">
+              <a href="./home.html" class="hover:text-violet-400">Home</a>
+              <a href="./services.html" class="hover:text-violet-400">Service</a>
+              <a href="./about.html" class="hover:text-violet-400">Service</a>
               <a href="#" class="hover:text-violet-400">Contact Us</a>
               <a href="./quote.html" class="hover:text-violet-400">Quote</a>
             </div>
-
-            <!-- Login Button -->
-            <div>
-              <button class="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-700">
-                Login
-              </button>
-            </div>
-          </nav>
-        </div>
+          </div>
+          <!-- Login Button -->
+          <div id="login-button" class="hidden md:block">
+            <button
+              class="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-700 text-lg"
+            >
+              Login
+            </button>
+          </div>
+        </nav>
       </div>
+    </div>
+    <!-- Navigation end -->
+
+    <div
+      class="bg-[url('./assets/img3.jpeg')] h-screen w-full bg-cover bg-center bg-no-repeat absolute top-0 flex items-center justify-center"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-80"></div>
 
       <!-- hero section -->
       <div
-        class="relative z-10 lg:mx-16 mx-5 text-white flex lg:justify-between lg:flex-row flex-col gap-y-3 mt-20"
+        class="relative z-10 lg:mx-16 text-white flex lg:justify-between lg:flex-row flex-col gap-y-3 mt-20"
       >
         <!-- global treade -->
-        <div class="space-y-5 lg:w-2/4 w-full">
+        <div class="space-y-5 lg:w-2/4 w-full p-2 lg:p-0">
           <h1 class="font-bold text-5xl leading-[65px]">
             Shipping <span class="text-violet-600">Beyond Borders,</span> <br />
             Beyond Expectations!
@@ -63,31 +73,32 @@
             shipping across the borders.
           </p>
           <div class="flex items-center">
-            <img src="./assets/sea.png" alt="" />
-            <img src="./assets/land.png" alt="" />
-            <img src="./assets/Air.png" alt="" />
+            <img src="./assets/sea.png" alt="" class="w-24 lg:w-48" />
+            <img src="./assets/land.png" alt="" class="w-24 lg:w-48" />
+            <img src="./assets/Air.png" alt="" class="w-24 lg:w-48" />
           </div>
         </div>
         <!-- imgae -->
-        <div class="w-2/4">
+        <div class="lg:w-2/4 w-full">
           <div class="flex justify-end relative">
-            <img src="./assets/img1.png" alt="" />
-            <div class="absolute right-96 -bottom-20">
-              <img src="./assets/img2.png" alt="" class="w-52 rounded-sm" />
+            <img src="./assets/img1.png" alt="" class="w-44 md:w-96" />
+            <div class="absolute bottom-5 right-36 md:right-60 md:bottom-10">
+              <img src="./assets/img2.png" alt="" class="w-20 md:w-40 rounded-sm" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <main>
-      <div class="flex justify-center items-center mx-16 mt-20 mb-10">
-        <div class="w-[85%]">
+
+    <main class="mt-[calc(100vh+0px)]">
+      <div class="flex justify-center items-center lg:mx-16 mt-20 mb-10">
+        <div class="lg:w-[85%] w-full">
           <!-- about us -->
-          <section class="flex justify-center gap-x-14">
-            <div class="w-1/3">
-              <img src="./assets/about-banner.jpg" alt="" />
+          <section class="flex justify-center flex-col lg:flex-row gap-x-14">
+            <div class="lg:w-1/3 w-full">
+              <img src="./assets/about-banner.jpg" alt="" class="w-full p-2 lg:p-0" />
             </div>
-            <div class="w-2/3 space-y-4">
+            <div class="lg:w-2/3 w-full space-y-4 p-2 lg:p-0">
               <h1 class="text-2xl text-violet-600 font-bold">About Us</h1>
               <div class="space-y-2">
                 <h1 class="text-5xl font-bold">Our Company Overview</h1>
@@ -100,7 +111,7 @@
                   seamless transactions to and from the UAE and the globe
                 </p>
               </div>
-              <div class="space-x-5">
+              <div class="flex gap-3 flex-wrap">
                 <button
                   class="py-2 px-5 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75"
                 >
@@ -151,10 +162,11 @@
           <!-- about us content -->
         </div>
       </div>
+
       <!-- our vission section -->
-      <div class="bg-gray-100">
-        <div class="flex justify-center items-center mx-16 mt-20 mb-10">
-          <div class="w-[85%] space-y-7 py-7">
+      <div class="bg-gray-100 my-2">
+        <div class="flex justify-center items-center lg:mx-16 mt-20 mb-10">
+          <div class="lg:w-[85%] w-full space-y-7 py-7 px-2 lg:px-0">
             <!-- vission title -->
             <div>
               <h1 class="text-violet-600 font-bold text-2xl">Our Vission</h1>
@@ -162,7 +174,7 @@
             </div>
             <!-- vission title end -->
             <!-- vission list -->
-            <div class="grid grid-cols-3 gap-x-8 gap-y-6">
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-x-8 gap-y-6">
               <!-- list 1 -->
               <div class="space-y-3 bg-white p-7 rounded-md">
                 <h1 class="font-semibold text-5xl text-violet-600">01</h1>
@@ -243,13 +255,13 @@
       <!-- our vission end -->
 
       <!-- core values section -->
-      <div class="flex justify-center items-center mx-16 mt-20 mb-10">
-        <div class="w-[85%]">
-          <div class="flex gap-x-4 justify-center">
-            <div class="w-1/2">
-              <h1 class="font-bold text-6xl">Our Core Values</h1>
+      <div class="flex justify-center items-center lg:mx-16 mt-20 mb-10">
+        <div class="lg:w-[85%] w-full">
+          <div class="flex gap-x-4 flex-col lg:flex-row justify-center gap-y-10 p-2 lg:p-0">
+            <div class="lg:w-1/2 w-full">
+              <h1 class="font-bold text-6xl align-middle">Our Core Values</h1>
             </div>
-            <div class="w-1/2 grid grid-cols-2 gap-x-4 gap-y-8">
+            <div class="lg:w-1/2 w-full grid 2xl:grid-cols-2 grid-cols-1 gap-x-4 gap-y-8">
               <div class="flex gap-x-4">
                 <i class="fa-solid fa-truck text-5xl"></i>
                 <div class="space-y-2 border-l-4 border-violet-600 px-4">
@@ -298,12 +310,12 @@
 
       <!-- client feedback -->
       <div class="bg-indigo-900">
-        <div class="flex justify-center items-center mx-16 mt-20">
-          <div class="w-[85%] space-y-9 py-4">
+        <div class="flex justify-center items-center lg:mx-16 mt-20">
+          <div class="lg:w-[85%] w-full space-y-9 py-4 px-2 lg:px-0">
             <div>
               <h1 class="font-bold text-6xl text-center text-white">What Our Clients Say</h1>
             </div>
-            <div class="grid grid-cols-3 gap-x-8 gap-y-6 justify-center">
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-x-8 gap-y-6 justify-center">
               <!-- clients feedback 1 -->
               <div class="space-y-3 bg-white p-7 rounded-md">
                 <h1 class="font-semibold text-3xl text-violet-600">Client</h1>
@@ -384,9 +396,11 @@
     </main>
 
     <footer class="bg-gray-800 text-white">
-      <div class="mx-16 flex justify-center pt-10">
-        <div class="grid grid-cols-4 gap-4 w-[85%]">
-          <section class="space-y-4">
+      <div class="lg:mx-16 flex justify-center pt-10">
+        <div
+          class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-4 gap-4 lg:w-[85%] w-full"
+        >
+          <section class="space-y-4 p-2">
             <div>
               <h1 class="text-2xl font-bold">PLine Shipping</h1>
             </div>
@@ -406,7 +420,7 @@
               <i class="fa-brands fa-x-twitter"></i>
             </div>
           </section>
-          <section class="space-y-4 flex justify-start items-center flex-col">
+          <section class="space-y-4 flex justify-start lg:items-center items-start flex-col p-2">
             <div>
               <h1 class="font-bold text-2xl">Quick Links</h1>
             </div>
@@ -420,14 +434,14 @@
               </nav>
             </div>
           </section>
-          <section class="space-y-4 flex justify-start flex-col">
+          <section class="space-y-4 flex justify-start flex-col p-2">
             <div>
               <h1 class="font-bold text-2xl">Find Us</h1>
             </div>
             <div class="space-y-5">
-              <div class="flex items-center gap-x-3">
+              <div class="flex items-center gap-x-3 text-balance">
                 <i class="fa-solid fa-envelope text-xl text-violet-600"></i>
-                <h1>info@galaxyshipping.com</h1>
+                <h1 class="">info@galaxyshipping.com</h1>
               </div>
               <div class="flex items-center gap-x-3">
                 <i class="fa-brands fa-whatsapp text-xl text-violet-600"></i>
@@ -439,7 +453,7 @@
               </div>
             </div>
           </section>
-          <section class="space-y-4">
+          <section class="space-y-4 p-2 lg:ml-8">
             <div>
               <h1 class="font-bold text-xl">Get The App</h1>
             </div>
@@ -457,12 +471,13 @@
       <div class="mt-7">
         <hr class="border-gray-600" />
         <div class="text-center py-4">
-          <h1>
+          <h1 class="p-2">
             © Copyright 2024. All rights reserved.
             <span class="text-violet-600">Galaxy World Wide Shipping</span>
           </h1>
         </div>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
