@@ -17,23 +17,30 @@
     <!-- Navigation bar -->
     <div id="navbar" class="sticky top-0 z-40">
       <div class="relative z-10 lg:mx-16 mx-5">
-        <nav class="flex lg:justify-between lg:flex-row flex-col lg:items-center p-6">
+        <nav class="flex md:justify-between flex-col md:flex-row gap-y-4 p-6">
           <!-- Logo -->
-          <div>
+          <div class="flex justify-between">
             <img src="./assets/logo.jpg" alt="Logo" class="h-12 w-auto" />
+            <div onclick="menuOpenFunction(this)" class="md:hidden block" id="menu-button-open">
+              <i class="fa-solid fa-bars text-3xl text-white"></i>
+            </div>
+            <div onclick="menuCloseFunction(this)" class="hidden md:hidden" id="menu-button-close">
+              <i class="fa-solid fa-xmark text-3xl text-white"></i>
+            </div>
           </div>
 
           <!-- Navigation Links -->
-          <div class="flex space-x-6 text-white font-semibold text-lg">
-            <a href="./home.html" class="hover:text-violet-400">Home</a>
-            <a href="./services.html" class="hover:text-violet-400">Service</a>
-            <a href="./about.html" class="hover:text-violet-400">Service</a>
-            <a href="#" class="hover:text-violet-400">Contact Us</a>
-            <a href="./quote.html" class="hover:text-violet-400">Quote</a>
+          <div id="nav-link" class="space-y-4 hidden md:flex justify-center items-center gap-x-4">
+            <div class="flex gap-y-2 text-white font-semibold text-lg flex-col md:flex-row gap-x-4">
+              <a href="./home.html" class="hover:text-violet-400">Home</a>
+              <a href="./services.html" class="hover:text-violet-400">Service</a>
+              <a href="./about.html" class="hover:text-violet-400">Service</a>
+              <a href="#" class="hover:text-violet-400">Contact Us</a>
+              <a href="./quote.html" class="hover:text-violet-400">Quote</a>
+            </div>
           </div>
-
           <!-- Login Button -->
-          <div>
+          <div id="login-button" class="hidden md:block">
             <button
               class="bg-violet-500 text-white px-4 py-2 rounded-lg hover:bg-violet-700 text-lg"
             >
@@ -43,14 +50,16 @@
         </nav>
       </div>
     </div>
+    <!-- Navigation end -->
+
     <div
-      class="bg-[url('./assets/img3.jpeg')] h-[60vh] w-full bg-cover bg-center bg-no-repeat absolute top-0 flex items-center"
+      class="bg-[url('./assets/img3.jpeg')] h-[60vh] w-full bg-cover bg-center bg-no-repeat absolute top-0 flex items-center justify-center"
     >
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       <div class="relative z-10 lg:mx-16 mx-5 w-full">
-        <div class="flex justify-center items-center mx-16 mb-10">
-          <div class="w-[85%] space-y-3">
-            <h1 class="font-bold text-7xl text-white">Contact Us</h1>
+        <div class="flex justify-center items-center lg:mx-16 mb-10">
+          <div class="lg:w-[85%] w-full space-y-3">
+            <h1 class="font-bold lg:text-7xl text-5xl text-white">Contact Us</h1>
             <h1 class="text-white text-lg font-bold">
               Unlock Global Horizons with Streamlined Shipping
             </h1>
@@ -58,15 +67,16 @@
         </div>
       </div>
     </div>
-    <main>
-      <div class="flex justify-center items-center mx-16 mt-20 mb-10">
-        <div class="w-[85%]">
+
+    <main class="mt-[calc(57vh+0px)]">
+      <div class="flex justify-center items-center lg:mx-16 mt-24 mb-10">
+        <div class="lg:w-[85%] w-full">
           <!-- how work section -->
-          <section class="space-y-10">
+          <section class="space-y-10 p-2 lg:p-0">
             <h1 class="font-bold text-6xl text-center">
               How is the work <span class="text-violet-600">going</span>
             </h1>
-            <div class="grid grid-cols-3 gap-x-8">
+            <div class="grid lg:grid-cols-3 grid-cols-1 space-y-4 gap-x-8">
               <div class="text-center bg-gray-300 space-y-2 py-8 rounded-lg">
                 <i class="fa-brands fa-whatsapp text-4xl"></i>
                 <h1 class="font-bold text-lg">PHONE NUMBER</h1>
@@ -88,10 +98,10 @@
           </section>
           <!-- how work section end -->
 
-          <!-- message section -->
-          <section class="mt-20 mx-16 flex justify-center items-center">
+          <!-- message section start -->
+          <section class="mt-20 lg:mx-16 p-3 lg:p-0 flex justify-center items-center">
             <div>
-              <div class="grid grid-cols-2 gap-x-8 justify-center">
+              <div class="grid lg:grid-cols-2 grid-cols-1 md:gap-x-8 gap-y-4 justify-center">
                 <div>
                   <h1 class="text-7xl font-bold leading-[67px]">
                     Get in touch with us now for any <span class="text-violet-600">Inquiries!</span>
@@ -99,7 +109,7 @@
                 </div>
                 <div>
                   <div class="space-y-4">
-                    <div class="grid grid-cols-2 gap-x-3 font-bold">
+                    <div class="grid lg:grid-cols-2 grid-cols-1 gap-x-3 font-bold">
                       <div class="flex flex-col">
                         <label for="firstName " class="font-bold">First Name</label>
                         <input
@@ -150,15 +160,15 @@
         </div>
       </div>
       <!-- faq section -->
-      <section class="bg-gray-100">
-        <div class="flex justify-center items-center mx-16 mt-20 mb-10">
-          <div class="w-[90%]">
-            <div class="grid grid-cols-2 p-10 gap-x-10">
+      <section class="bg-gray-100 mt-24">
+        <div class="flex justify-center items-center lg:mx-16 mt-20 mb-10">
+          <div class="lg:w-[90%] w-full">
+            <div class="grid lg:grid-cols-2 grid-cols-1 lg:p-10 gap-x-10 p-2">
               <div class="space-y-4">
                 <h1 class="text-2xl pl-3 font-bold border-l-4 border-violet-600">FAQ</h1>
                 <h1 class="text-6xl font-bold">Frequently Asked Questions</h1>
                 <div>
-                  <ul class="divide-y">
+                  <ul class="divide-y w-full">
                     <li>
                       <details class="group">
                         <summary
@@ -352,10 +362,10 @@
                 </div>
               </div>
               <div>
-                <div class="w-full relative">
+                <div class="w-full relative space-y-2 lg:space-y-0 p-2 lg:p-0">
                   <img src="./assets/shiping-container.jpeg" alt="" class="w-full" />
                   <div
-                    class="absolute bg-gray-600 text-white p-6 rounded-md space-y-2 max-w-96 top-20 -left-10"
+                    class="lg:absolute bg-gray-600 text-white p-6 rounded-md space-y-2 lg:max-w-96 w-full lg:top-20 lg:-left-10"
                   >
                     <p class="p-2 border-l-4 border-violet-600 bg-gray-800 w-24">Let's Talk</p>
                     <h1 class="font-bold text-xl">You need any help? get free consultation</h1>
@@ -387,8 +397,8 @@
 
       <!-- office section -->
       <section class="bg-gray-100">
-        <div class="flex justify-center items-center mx-16 mt-20">
-          <div class="w-[85%]">
+        <div class="flex justify-center items-center lg:mx-16 mt-20">
+          <div class="lg:w-[85%] w-full">
             <div class="space-y-6 py-6">
               <h1 class="font-bold text-6xl">Offices</h1>
               <hr class="border-gray-400" />
@@ -417,10 +427,10 @@
 
                       <article class="px-4 pb-4">
                         <div
-                          class="grid grid-cols-2 justify-center justify-items-center items-center"
+                          class="grid lg:grid-cols-2 grid-cols-1 space-y-2 justify-center justify-items-center items-center"
                         >
-                          <img src="./assets/office-image1.png" alt="" class="w-96" />
-                          <div class="w-80 flex gap-x-4 hover:text-violet-600">
+                          <img src="./assets/office-image1.png" alt="" class="lg:w-96 w-full" />
+                          <div class="lg:w-80 w-full flex gap-x-4 hover:text-violet-600">
                             <i class="fa-solid fa-location-dot text-4xl"></i>
                             <h1 class="text-xl">
                               Industrial Area 13 - Industrial Area - Sharjah - United Arab Emirates
@@ -453,10 +463,10 @@
 
                       <article class="px-4 pb-4">
                         <div
-                          class="grid grid-cols-2 justify-center justify-items-center items-center"
+                          class="grid lg:grid-cols-2 grid-cols-1 space-y-2 justify-center justify-items-center items-center"
                         >
-                          <img src="./assets/office-image1.png" alt="" class="w-96" />
-                          <div class="w-80 flex gap-x-4 hover:text-violet-600">
+                          <img src="./assets/office-image1.png" alt="" class="lg:w-96 w-full" />
+                          <div class="lg:w-80 w-full flex gap-x-4 hover:text-violet-600">
                             <i class="fa-solid fa-location-dot text-4xl"></i>
                             <h1 class="text-xl">
                               779H+PF8 - Port Rashid - Dubai - United Arab Emirates
@@ -489,10 +499,10 @@
 
                       <article class="px-4 pb-4">
                         <div
-                          class="grid grid-cols-2 justify-center justify-items-center items-center"
+                          class="grid lg:grid-cols-2 grid-cols-1 space-y-2 justify-center justify-items-center items-center"
                         >
-                          <img src="./assets/office-image1.png" alt="" class="w-96" />
-                          <div class="w-80 flex gap-x-4 hover:text-violet-600">
+                          <img src="./assets/office-image1.png" alt="" class="lg:w-96 w-full" />
+                          <div class="lg:w-80 w-full flex gap-x-4 hover:text-violet-600">
                             <i class="fa-solid fa-location-dot text-4xl"></i>
                             <h1 class="text-xl">
                               DEIRA WARFAGE BERTH # 23 OFFICE # 07 - Dubai - United Arab Emirates
@@ -526,10 +536,10 @@
 
                       <article class="px-4 pb-4">
                         <div
-                          class="grid grid-cols-2 justify-center justify-items-center items-center"
+                          class="grid lg:grid-cols-2 grid-cols-1 space-y-2 justify-center justify-items-center items-center"
                         >
-                          <img src="./assets/office-image1.png" alt="" class="w-96" />
-                          <div class="w-80 flex gap-x-4 hover:text-violet-600">
+                          <img src="./assets/office-image1.png" alt="" class="lg:w-96 w-full" />
+                          <div class="lg:w-80 w-full flex gap-x-4 hover:text-violet-600">
                             <i class="fa-solid fa-location-dot text-4xl"></i>
                             <h1 class="text-xl">
                               Industrial Area 4 - Industrial Area - Sharjah - United Arab Emirates
@@ -549,9 +559,11 @@
     </main>
 
     <footer class="bg-gray-800 text-white">
-      <div class="mx-16 flex justify-center pt-10">
-        <div class="grid grid-cols-4 gap-4 w-[85%]">
-          <section class="space-y-4">
+      <div class="lg:mx-16 mt-20 flex justify-center pt-10">
+        <div
+          class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-4 gap-4 lg:w-[85%] w-full"
+        >
+          <section class="space-y-4 p-2">
             <div>
               <h1 class="text-2xl font-bold">PLine Shipping</h1>
             </div>
@@ -571,7 +583,7 @@
               <i class="fa-brands fa-x-twitter"></i>
             </div>
           </section>
-          <section class="space-y-4 flex justify-start items-center flex-col">
+          <section class="space-y-4 flex justify-start lg:items-center items-start flex-col p-2">
             <div>
               <h1 class="font-bold text-2xl">Quick Links</h1>
             </div>
@@ -585,14 +597,14 @@
               </nav>
             </div>
           </section>
-          <section class="space-y-4 flex justify-start flex-col">
+          <section class="space-y-4 flex justify-start flex-col p-2">
             <div>
               <h1 class="font-bold text-2xl">Find Us</h1>
             </div>
             <div class="space-y-5">
-              <div class="flex items-center gap-x-3">
+              <div class="flex items-center gap-x-3 text-balance">
                 <i class="fa-solid fa-envelope text-xl text-violet-600"></i>
-                <h1>info@galaxyshipping.com</h1>
+                <h1 class="">info@galaxyshipping.com</h1>
               </div>
               <div class="flex items-center gap-x-3">
                 <i class="fa-brands fa-whatsapp text-xl text-violet-600"></i>
@@ -604,7 +616,7 @@
               </div>
             </div>
           </section>
-          <section class="space-y-4">
+          <section class="space-y-4 p-2 lg:ml-8">
             <div>
               <h1 class="font-bold text-xl">Get The App</h1>
             </div>
@@ -622,7 +634,7 @@
       <div class="mt-7">
         <hr class="border-gray-600" />
         <div class="text-center py-4">
-          <h1>
+          <h1 class="p-2">
             © Copyright 2024. All rights reserved.
             <span class="text-violet-600">Galaxy World Wide Shipping</span>
           </h1>
